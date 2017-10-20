@@ -1,1 +1,15 @@
 C:\Users\admin\Documents\GitHub\VStudioNet\PryCSharp\CRUD_C#\formulario\formulario\bin\Debug\formulario.exe.config
+C:\Users\admin\Documents\GitHub\VStudioNet\PryCSharp\CRUD_C#\formulario\formulario\bin\Debug\formulario.exe
+C:\Users\admin\Documents\GitHub\VStudioNet\PryCSharp\CRUD_C#\formulario\formulario\bin\Debug\formulario.pdb
+C:\Users\admin\Documents\GitHub\VStudioNet\PryCSharp\CRUD_C#\formulario\formulario\bin\Debug\logica.dll
+C:\Users\admin\Documents\GitHub\VStudioNet\PryCSharp\CRUD_C#\formulario\formulario\bin\Debug\entidad.dll
+C:\Users\admin\Documents\GitHub\VStudioNet\PryCSharp\CRUD_C#\formulario\formulario\bin\Debug\datos.dll
+C:\Users\admin\Documents\GitHub\VStudioNet\PryCSharp\CRUD_C#\formulario\formulario\bin\Debug\logica.pdb
+C:\Users\admin\Documents\GitHub\VStudioNet\PryCSharp\CRUD_C#\formulario\formulario\bin\Debug\entidad.pdb
+C:\Users\admin\Documents\GitHub\VStudioNet\PryCSharp\CRUD_C#\formulario\formulario\bin\Debug\datos.pdb
+C:\Users\admin\Documents\GitHub\VStudioNet\PryCSharp\CRUD_C#\formulario\formulario\obj\Debug\formulario.csprojResolveAssemblyReference.cache
+C:\Users\admin\Documents\GitHub\VStudioNet\PryCSharp\CRUD_C#\formulario\formulario\obj\Debug\formulario.SimpleCRUD.resources
+C:\Users\admin\Documents\GitHub\VStudioNet\PryCSharp\CRUD_C#\formulario\formulario\obj\Debug\formulario.Properties.Resources.resources
+C:\Users\admin\Documents\GitHub\VStudioNet\PryCSharp\CRUD_C#\formulario\formulario\obj\Debug\formulario.csproj.GenerateResource.Cache
+C:\Users\admin\Documents\GitHub\VStudioNet\PryCSharp\CRUD_C#\formulario\formulario\obj\Debug\formulario.exe
+C:\Users\admin\Documents\GitHub\VStudioNet\PryCSharp\CRUD_C#\formulario\formulario\obj\Debug\formulario.pdb

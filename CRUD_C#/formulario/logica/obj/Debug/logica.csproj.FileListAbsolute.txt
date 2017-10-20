@@ -1,0 +1,9 @@
+C:\Users\admin\Documents\GitHub\VStudioNet\PryCSharp\CRUD_C#\formulario\logica\bin\Debug\logica.dll
+C:\Users\admin\Documents\GitHub\VStudioNet\PryCSharp\CRUD_C#\formulario\logica\bin\Debug\logica.pdb
+C:\Users\admin\Documents\GitHub\VStudioNet\PryCSharp\CRUD_C#\formulario\logica\bin\Debug\datos.dll
+C:\Users\admin\Documents\GitHub\VStudioNet\PryCSharp\CRUD_C#\formulario\logica\bin\Debug\entidad.dll
+C:\Users\admin\Documents\GitHub\VStudioNet\PryCSharp\CRUD_C#\formulario\logica\bin\Debug\datos.pdb
+C:\Users\admin\Documents\GitHub\VStudioNet\PryCSharp\CRUD_C#\formulario\logica\bin\Debug\entidad.pdb
+C:\Users\admin\Documents\GitHub\VStudioNet\PryCSharp\CRUD_C#\formulario\logica\obj\Debug\logica.csprojResolveAssemblyReference.cache
+C:\Users\admin\Documents\GitHub\VStudioNet\PryCSharp\CRUD_C#\formulario\logica\obj\Debug\logica.dll
+C:\Users\admin\Documents\GitHub\VStudioNet\PryCSharp\CRUD_C#\formulario\logica\obj\Debug\logica.pdb
