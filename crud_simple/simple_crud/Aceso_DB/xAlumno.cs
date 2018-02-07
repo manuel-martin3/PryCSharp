@@ -23,6 +23,9 @@ namespace Aceso_DB
                     cmd.Parameters.Add("@apealu", SqlDbType.VarChar, 25).Value = BE.apealu;
                     cmd.Parameters.Add("@dnialu", SqlDbType.VarChar, 25).Value = BE.dnialu;
 
+                    cmd.Parameters.Add("@n1", SqlDbType.Int).Value = BE.n1;
+                    cmd.Parameters.Add("@n2", SqlDbType.Int).Value = BE.n2;
+                    cmd.Parameters.Add("@n3", SqlDbType.Int).Value = BE.n3;
                     try
                     {
                         cnx.Open();
@@ -56,6 +59,10 @@ namespace Aceso_DB
                         cmd.Parameters.Add("@nomalu", SqlDbType.VarChar, 25).Value = BE.nomalu;
                         cmd.Parameters.Add("@apealu", SqlDbType.VarChar, 25).Value = BE.apealu;
                         cmd.Parameters.Add("@dnialu", SqlDbType.VarChar, 25).Value = BE.dnialu;
+
+                        cmd.Parameters.Add("@n1", SqlDbType.Int).Value = BE.n1;
+                        cmd.Parameters.Add("@n2", SqlDbType.Int).Value = BE.n2;
+                        cmd.Parameters.Add("@n3", SqlDbType.Int).Value = BE.n3;
                     }
                     try
                     {

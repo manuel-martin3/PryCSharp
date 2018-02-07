@@ -1,8 +1,11 @@
 
-alter proc ins_registro( 
+ALTER proc [dbo].[ins_registro]( 
 @nomalu varchar(25),
 @apealu varchar(25),
-@dnialu varchar(25)
+@dnialu varchar(25),
+@n1	int,
+@n2	int,
+@n3	int
 )
 as
 INSERT INTO [dbo].[alumno]
@@ -13,20 +16,43 @@ INSERT INTO [dbo].[alumno]
            (@nomalu
            ,@apealu
            ,@dnialu)
+
+declare @idalu int = (select max(Idalu) from [dbo].[alumno])
+INSERT INTO [dbo].[notas]
+           ([n1]
+           ,[n2]
+           ,[n3]
+           ,[idalu])
+     VALUES
+           (@n1
+           ,@n2
+           ,@n3
+           ,@idalu)
+
 GO
 
 
-alter proc upd_registro( 
+
+ALTER proc [dbo].[upd_registro]( 
 @Idalu int,
 @nomalu varchar(25),
 @apealu varchar(25),
-@dnialu varchar(25)
+@dnialu varchar(25),
+@n1 int,
+@n2 int,
+@n3 int
 )
 as
 UPDATE [dbo].[alumno]
    SET [nomalu] = @nomalu
       ,[apealu] = @apealu
       ,[dnialu] = @dnialu
+ WHERE Idalu = @Idalu
+
+ UPDATE [dbo].[notas]
+   SET [n1] = @n1
+      ,[n2] = @n2
+      ,[n3] = @n3
  WHERE Idalu = @Idalu
 
  GO

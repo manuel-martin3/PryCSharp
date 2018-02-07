@@ -29,9 +29,8 @@ CREATE TABLE IF NOT EXISTS "alumno" (
 INSERT IGNORE INTO "alumno" ("Idalu", "nomalu", "apealu", "dnialu") VALUES
 	(1, 'manuel', 'martinez', '15832157'),
 	(3, 'miguel', 'ruiz', '78965120'),
-	(4, 'ernesto', 'rubens', '52036987'),
-	(1003, 'pedro', 'perez', '55632189'),
-	(1004, 'eeeee', 'eee', '12121212');
+	(1006, 'juan', 'lopes', '12345678'),
+	(1007, 'martin', 'manuel', '53535535');
 /*!40000 ALTER TABLE "alumno" ENABLE KEYS */;
 
 -- Volcando estructura para procedimiento matricula.busca_alumno
@@ -92,10 +91,13 @@ DELIMITER ;
 -- Volcando estructura para procedimiento matricula.ins_registro
 DELIMITER //
 
-CREATE proc ins_registro( 
+CREATE proc [dbo].[ins_registro]( 
 @nomalu varchar(25),
 @apealu varchar(25),
-@dnialu varchar(25)
+@dnialu varchar(25),
+@n1	int,
+@n2	int,
+@n3	int
 )
 as
 INSERT INTO [dbo].[alumno]
@@ -106,6 +108,18 @@ INSERT INTO [dbo].[alumno]
            (@nomalu
            ,@apealu
            ,@dnialu)
+
+declare @idalu int = (select max(Idalu) from [dbo].[alumno])
+INSERT INTO [dbo].[notas]
+           ([n1]
+           ,[n2]
+           ,[n3]
+           ,[idalu])
+     VALUES
+           (@n1
+           ,@n2
+           ,@n3
+           ,@idalu)
 //
 DELIMITER ;
 
@@ -147,7 +161,9 @@ CREATE TABLE IF NOT EXISTS "notas" (
 /*!40000 ALTER TABLE "notas" DISABLE KEYS */;
 INSERT IGNORE INTO "notas" ("idn", "n1", "n2", "n3", "idalu", "prom") VALUES
 	(3, 13, 19, 10, 3, 14),
-	(5, 16, 15, 10, 1, 13);
+	(5, 16, 15, 10, 1, 13),
+	(7, 13, 15, 13, 1006, 13),
+	(8, 15, 4, 2, 1007, 7);
 /*!40000 ALTER TABLE "notas" ENABLE KEYS */;
 
 -- Volcando estructura para procedimiento matricula.sel_registro
@@ -173,11 +189,14 @@ DELIMITER ;
 DELIMITER //
 
 
-CREATE proc upd_registro( 
+CREATE proc [dbo].[upd_registro]( 
 @Idalu int,
 @nomalu varchar(25),
 @apealu varchar(25),
-@dnialu varchar(25)
+@dnialu varchar(25),
+@n1 int,
+@n2 int,
+@n3 int
 )
 as
 UPDATE [dbo].[alumno]
@@ -186,7 +205,11 @@ UPDATE [dbo].[alumno]
       ,[dnialu] = @dnialu
  WHERE Idalu = @Idalu
 
-//
+ UPDATE [dbo].[notas]
+   SET [n1] = @n1
+      ,[n2] = @n2
+      ,[n3] = @n3
+ WHERE Idalu = @Idalu//
 DELIMITER ;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
