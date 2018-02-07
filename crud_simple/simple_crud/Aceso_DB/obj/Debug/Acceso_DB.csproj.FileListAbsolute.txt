@@ -1,0 +1,7 @@
+C:\Users\admin\Documents\GitHub\VStudioNet\PryCSharp\crud_simple\simple_crud\Aceso_DB\obj\Debug\Acceso_DB.csprojResolveAssemblyReference.cache
+C:\Users\admin\Documents\GitHub\VStudioNet\PryCSharp\crud_simple\simple_crud\Aceso_DB\bin\Debug\Aceso_DB.dll
+C:\Users\admin\Documents\GitHub\VStudioNet\PryCSharp\crud_simple\simple_crud\Aceso_DB\bin\Debug\Aceso_DB.pdb
+C:\Users\admin\Documents\GitHub\VStudioNet\PryCSharp\crud_simple\simple_crud\Aceso_DB\bin\Debug\Entidades.dll
+C:\Users\admin\Documents\GitHub\VStudioNet\PryCSharp\crud_simple\simple_crud\Aceso_DB\bin\Debug\Entidades.pdb
+C:\Users\admin\Documents\GitHub\VStudioNet\PryCSharp\crud_simple\simple_crud\Aceso_DB\obj\Debug\Aceso_DB.dll
+C:\Users\admin\Documents\GitHub\VStudioNet\PryCSharp\crud_simple\simple_crud\Aceso_DB\obj\Debug\Aceso_DB.pdb

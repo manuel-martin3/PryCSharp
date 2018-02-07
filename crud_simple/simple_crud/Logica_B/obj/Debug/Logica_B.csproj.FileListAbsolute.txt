@@ -1,0 +1,9 @@
+C:\Users\admin\Documents\GitHub\VStudioNet\PryCSharp\crud_simple\simple_crud\Logica_B\bin\Debug\Logica_B.dll
+C:\Users\admin\Documents\GitHub\VStudioNet\PryCSharp\crud_simple\simple_crud\Logica_B\bin\Debug\Logica_B.pdb
+C:\Users\admin\Documents\GitHub\VStudioNet\PryCSharp\crud_simple\simple_crud\Logica_B\obj\Debug\Logica_B.csprojResolveAssemblyReference.cache
+C:\Users\admin\Documents\GitHub\VStudioNet\PryCSharp\crud_simple\simple_crud\Logica_B\obj\Debug\Logica_B.dll
+C:\Users\admin\Documents\GitHub\VStudioNet\PryCSharp\crud_simple\simple_crud\Logica_B\obj\Debug\Logica_B.pdb
+C:\Users\admin\Documents\GitHub\VStudioNet\PryCSharp\crud_simple\simple_crud\Logica_B\bin\Debug\Aceso_DB.dll
+C:\Users\admin\Documents\GitHub\VStudioNet\PryCSharp\crud_simple\simple_crud\Logica_B\bin\Debug\Entidades.dll
+C:\Users\admin\Documents\GitHub\VStudioNet\PryCSharp\crud_simple\simple_crud\Logica_B\bin\Debug\Aceso_DB.pdb
+C:\Users\admin\Documents\GitHub\VStudioNet\PryCSharp\crud_simple\simple_crud\Logica_B\bin\Debug\Entidades.pdb

@@ -1,0 +1,15 @@
+C:\Users\admin\Documents\GitHub\VStudioNet\PryCSharp\crud_simple\simple_crud\simplecrud\bin\Debug\simplecrud.exe.config
+C:\Users\admin\Documents\GitHub\VStudioNet\PryCSharp\crud_simple\simple_crud\simplecrud\bin\Debug\simplecrud.exe
+C:\Users\admin\Documents\GitHub\VStudioNet\PryCSharp\crud_simple\simple_crud\simplecrud\bin\Debug\simplecrud.pdb
+C:\Users\admin\Documents\GitHub\VStudioNet\PryCSharp\crud_simple\simple_crud\simplecrud\obj\Debug\simplecrud.csprojResolveAssemblyReference.cache
+C:\Users\admin\Documents\GitHub\VStudioNet\PryCSharp\crud_simple\simple_crud\simplecrud\obj\Debug\simplecrud.Form1.resources
+C:\Users\admin\Documents\GitHub\VStudioNet\PryCSharp\crud_simple\simple_crud\simplecrud\obj\Debug\simplecrud.Properties.Resources.resources
+C:\Users\admin\Documents\GitHub\VStudioNet\PryCSharp\crud_simple\simple_crud\simplecrud\obj\Debug\simplecrud.csproj.GenerateResource.Cache
+C:\Users\admin\Documents\GitHub\VStudioNet\PryCSharp\crud_simple\simple_crud\simplecrud\obj\Debug\simplecrud.exe
+C:\Users\admin\Documents\GitHub\VStudioNet\PryCSharp\crud_simple\simple_crud\simplecrud\obj\Debug\simplecrud.pdb
+C:\Users\admin\Documents\GitHub\VStudioNet\PryCSharp\crud_simple\simple_crud\simplecrud\bin\Debug\Entidades.dll
+C:\Users\admin\Documents\GitHub\VStudioNet\PryCSharp\crud_simple\simple_crud\simplecrud\bin\Debug\Logica_B.dll
+C:\Users\admin\Documents\GitHub\VStudioNet\PryCSharp\crud_simple\simple_crud\simplecrud\bin\Debug\Aceso_DB.dll
+C:\Users\admin\Documents\GitHub\VStudioNet\PryCSharp\crud_simple\simple_crud\simplecrud\bin\Debug\Entidades.pdb
+C:\Users\admin\Documents\GitHub\VStudioNet\PryCSharp\crud_simple\simple_crud\simplecrud\bin\Debug\Logica_B.pdb
+C:\Users\admin\Documents\GitHub\VStudioNet\PryCSharp\crud_simple\simple_crud\simplecrud\bin\Debug\Aceso_DB.pdb
