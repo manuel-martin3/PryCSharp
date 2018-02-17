@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="sampleDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="cargo">
+    <Key>
+      <PropertyRef Name="car_cod" />
+    </Key>
+    <Property Name="car_cod" Type="Int32" Nullable="false" />
+    <Property Name="car_des" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="usuario" Relationship="Self.FK__usuario__car_cod__37A5467C" FromRole="cargo" ToRole="usuario" />
+  </EntityType>
+  <EntityType Name="usuario">
+    <Key>
+      <PropertyRef Name="cod_usu" />
+    </Key>
+    <Property Name="cod_usu" Type="Int32" Nullable="false" />
+    <Property Name="nom_usu" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="car_cod" Type="Int32" />
+    <NavigationProperty Name="cargo" Relationship="Self.FK__usuario__car_cod__37A5467C" FromRole="usuario" ToRole="cargo" />
+  </EntityType>
+  <Association Name="FK__usuario__car_cod__37A5467C">
+    <End Role="cargo" Type="Self.cargo" Multiplicity="0..1" />
+    <End Role="usuario" Type="Self.usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="cargo">
+        <PropertyRef Name="car_cod" />
+      </Principal>
+      <Dependent Role="usuario">
+        <PropertyRef Name="car_cod" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="sampleDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="cargo" EntityType="Self.cargo" />
+    <EntitySet Name="usuario" EntityType="Self.usuario" />
+    <AssociationSet Name="FK__usuario__car_cod__37A5467C" Association="Self.FK__usuario__car_cod__37A5467C">
+      <End Role="cargo" EntitySet="cargo" />
+      <End Role="usuario" EntitySet="usuario" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

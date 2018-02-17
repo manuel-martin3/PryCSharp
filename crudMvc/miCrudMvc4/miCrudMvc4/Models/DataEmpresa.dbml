@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="bd_empresa" Class="DataEmpresaDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=PC\SQLEXPRESS;Initial Catalog=bd_empresa;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="bd_empresaConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.area" Member="areas">
+    <Type Name="area">
+      <Column Name="are_cod" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="are_des" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.PR_DELETEAREA" Method="PR_DELETEAREA">
+    <Parameter Name="are_cod" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.PR_INSERTAREA" Method="PR_INSERTAREA">
+    <Parameter Name="are_des" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.PR_SEARCHAREA" Method="PR_SEARCHAREA">
+    <Parameter Name="are_cod" Type="System.Int32" DbType="Int" />
+    <ElementType Name="PR_SEARCHAREAResult">
+      <Column Name="are_cod" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="are_des" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.PR_UPDATEAREA" Method="PR_UPDATEAREA">
+    <Parameter Name="are_cod" Type="System.Int32" DbType="Int" />
+    <Parameter Name="are_des" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

@@ -1,0 +1,45 @@
+﻿@model IEnumerable<miCrudMvc3.Models.usuario>
+
+@{
+    ViewBag.Title = "usuarioxCargo";
+}
+
+<h2>usuarioxCargo</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.cod_usu)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nom_usu)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.car_cod)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.cod_usu)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.nom_usu)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.car_cod)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>
