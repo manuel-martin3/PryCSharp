@@ -195,6 +195,17 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\table\css\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\table\css\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\table\css\jquery.bdt.css" />
+    <Content Include="Content\table\css\jquery.bdt.min.css" />
+    <Content Include="Content\table\css\style.css" />
+    <Content Include="Content\table\css\vendor\bootstrap-theme.css" />
+    <Content Include="Content\table\css\vendor\bootstrap-theme.min.css" />
+    <Content Include="Content\table\css\vendor\bootstrap.css" />
+    <Content Include="Content\table\css\vendor\bootstrap.min.css" />
+    <Content Include="Content\table\css\vendor\font-awesome.css" />
+    <Content Include="Content\table\css\vendor\font-awesome.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -218,6 +229,16 @@
       <DependentUpon>Model.edmx</DependentUpon>
       <LastGenOutput>Model.cs</LastGenOutput>
     </Content>
+    <Content Include="Content\table\css\.DS_Store" />
+    <Content Include="Content\table\css\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\table\css\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\table\css\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\table\css\fonts\FontAwesome.otf" />
+    <Content Include="Content\table\css\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\table\css\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\table\css\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\table\css\vendor\bootstrap-theme.css.map" />
+    <Content Include="Content\table\css\vendor\bootstrap.css.map" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -229,6 +250,11 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\table\js\jquery.bdt.js" />
+    <Content Include="Scripts\table\js\jquery.bdt.min.js" />
+    <Content Include="Scripts\table\js\vendor\bootstrap.js" />
+    <Content Include="Scripts\table\js\vendor\bootstrap.min.js" />
+    <Content Include="Scripts\table\js\vendor\jquery.sortelements.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -255,6 +281,8 @@
     <Content Include="Views\Account\Manage.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Scripts\table\js\.DS_Store" />
+    <Content Include="Scripts\table\js\vendor\.DS_Store" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
