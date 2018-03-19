@@ -1,0 +1,47 @@
+﻿@model Anotacion_d_Data.Models.datosEmail
+@using System.Web.Optimization
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/jqueryvalunobtrusive")
+</head>
+<body>
+    <div> 
+        <h3>Ingrese los Datos</h3>
+        @using (Html.BeginForm("DatosPersonales", "Home", FormMethod.Post)) 
+        { 
+            //@Html.EditorForModel()
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div>
+                <div>
+                    @Html.LabelFor(m => m.email, new { @class = "control-label" })
+                    @Html.TextBoxFor(m => m.email, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.email, "", new { @class = "text-danger" })
+                </div><br />
+                <div>
+                    @Html.LabelFor(m => m.password, new { @class = "control-label" })
+                    @Html.PasswordFor(m => m.password, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.password, "", new { @class = "text-danger" })                    
+                </div><br />
+                <div>
+                    @Html.LabelFor(m => m.confirmaPass, new { @class = "control-label" })
+                    @Html.PasswordFor(m => m.confirmaPass, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.confirmaPass, "", new { @class = "text-danger" })                    
+                </div><br />
+
+            </div>
+            <input type="submit" value="Enviar" />    
+        }
+
+    </div>
+</body>
+</html>

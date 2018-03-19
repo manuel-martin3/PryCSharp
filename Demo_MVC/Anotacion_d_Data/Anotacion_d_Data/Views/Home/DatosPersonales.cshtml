@@ -1,0 +1,53 @@
+﻿@model Anotacion_d_Data.Models.datosPersonales
+@using System.Web.Optimization
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>DatosPersonales</title>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/jqueryvalunobtrusive")
+</head>
+<body>
+    <div> 
+       <h3>Ingrese los Datos</h3>
+        @using (Html.BeginForm("mostrarDatos", "Home", FormMethod.Post)) 
+        { 
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="datosPersonales">
+                <div>
+                    @Html.LabelFor(m => m.nombre, new { @class = "control-label"})
+                    @Html.TextBoxFor(m => m.nombre, new { @class = "form-control"})
+                    @Html.ValidationMessageFor(m => m.nombre,"" ,new { @class = "text-danger"})
+
+                </div><br />
+                <div>
+                    @Html.LabelFor(m => m.apellido, new { @class = "control-label" })
+                    @Html.TextBoxFor(m => m.apellido, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.apellido, "", new { @class = "text-danger" })
+
+                </div><br />
+                <div>
+                    @Html.LabelFor(m => m.edad, new { @class = "control-label" })
+                    @Html.TextBoxFor(m => m.edad, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.edad, "", new { @class = "text-danger" })
+
+                </div><br />
+                <div>
+                    @Html.LabelFor(m => m.number, new { @class = "control-label" })
+                    @Html.TextBoxFor(m => m.number, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.number, "", new { @class = "text-danger" })
+
+                </div><br />
+            </div>
+            <input type="submit"  value="Enviar" />
+        }
+    </div>
+</body>
+</html>

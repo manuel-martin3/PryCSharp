@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+@using System.Web.Optimization  
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/jqueryvalunobtrusive")
+
+    @Styles.Render("~/Content/css")
+   
+</head>
+<body>
+    @{ string User = Convert.ToString(Session["userName"]);
+       if (User != "")
+       {
+           <div class="head">
+               <ul class="nav navbar-nav">
+                   <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
+                   <li>@Html.ActionLink("Acerca de ", "Index2", "")</li>
+                   <li>@Html.ActionLink("Salir", "Index", "Home")</li>
+               </ul>
+               <h2>Bienvenido: @User</h2>
+           </div><br /><br />
+       }   
+     }
+    <div>
+        @RenderBody()
+    </div>
+
+    <footer>
+        <center>
+            <p>&copy; MMartin</p>
+        </center>
+    </footer>
+</body>
+</html>

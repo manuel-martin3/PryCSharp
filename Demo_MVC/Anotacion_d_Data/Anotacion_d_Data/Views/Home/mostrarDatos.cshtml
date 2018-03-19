@@ -1,0 +1,49 @@
+﻿@model Anotacion_d_Data.Models.datosPersonales
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>mostrarDatos</title>
+</head>
+<body>
+    <div>
+        <table>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(m=>m.nombre)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(m => m.apellido)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(m => m.edad)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(m => m.number)
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    @Html.DisplayFor(m => m.nombre)
+                </td>
+                <td>
+                    @Html.DisplayFor(m => m.apellido)
+                </td>
+                <td>
+                    @Html.DisplayFor(m => m.edad)
+                </td>
+                <td>
+                    @Html.DisplayFor(m => m.number)
+                </td>
+            </tr>
+
+        </table> 
+    </div>
+</body>
+</html>
