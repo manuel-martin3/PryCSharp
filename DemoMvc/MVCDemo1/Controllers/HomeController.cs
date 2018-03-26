@@ -15,7 +15,7 @@ namespace MVCDemo1.Controllers
         public ActionResult Index()
         {
             List<Categories> catList = db.Categories.ToList();
-            ViewBag.ListOfCategoria = new SelectList(catList, "CategoryID", "CategoryName"); 
+            ViewBag.ListOfCategoria = new SelectList(catList, "CategoryID", "CategoryName");            
             return View();
         }
 
@@ -27,15 +27,19 @@ namespace MVCDemo1.Controllers
                 ProductID= x.ProductID,
                 ProductName= x.ProductName,
                 QuantityPerUnit= x.QuantityPerUnit,
-                CategoryName = x.Categories.CategoryName
+                CategoryName = x.Categories.CategoryName,
+                param = "Hola Mundo",
+                param1 = 10,
+                param2 = 5.4,
+                param3 = true
             }).ToList();
 
             return Json(ProductList,JsonRequestBehavior.AllowGet);
         }
 
         public JsonResult GetProductById(int ProductID) 
-        { 
-        
+        {
+            
             Products model = db.Products.Where(x=>x.ProductID==ProductID).SingleOrDefault();
             string value=string.Empty;
             value = JsonConvert.SerializeObject(model,Formatting.Indented,new JsonSerializerSettings{
@@ -49,6 +53,11 @@ namespace MVCDemo1.Controllers
         public JsonResult SaveDataInDatabase(ProductViewModel model)
         {
             var result = false;
+            //ViewBag.datoRecuperado = "recuperado";
+            string valor = model.param;
+            int valor1 = model.param1;
+            double valor2 = model.param2;
+            bool valor3 = model.param3;
             try
             {
                 if (model.ProductID > 0)

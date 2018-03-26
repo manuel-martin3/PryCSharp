@@ -20,6 +20,10 @@ namespace MVCDemo1.Models
 
         public string CategoryName { get; set; }
 
- 
+        public string param { get; set; }
+        public int param1 { get; set; }
+        public double param2 { get; set; }
+        public bool param3 { get; set; }
+     
     }
 }

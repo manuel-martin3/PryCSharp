@@ -26,5 +26,6 @@ namespace MVCDemo1.Models
         public bool Discontinued { get; set; }
     
         public virtual Categories Categories { get; set; }
+        
     }
 }

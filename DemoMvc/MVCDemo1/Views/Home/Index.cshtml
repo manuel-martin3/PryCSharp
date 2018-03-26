@@ -4,6 +4,11 @@
     Layout = null;
 }
 
+@Html.HiddenFor(m => m.param, new { @id = "parametro" })
+@Html.HiddenFor(m => m.param1, new { @id = "parametro1" })
+@Html.HiddenFor(m => m.param2, new { @id = "parametro2" })
+@Html.HiddenFor(m => m.param3, new { @id = "parametro3" })
+
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
 <link href="~/Content/table/css/jquery.bdt.css" rel="stylesheet" />
@@ -12,9 +17,10 @@
 <script src="~/Scripts/bootstrap.min.js"></script>
 <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
 
-<div class="container" style="margin-top:3%">
+<div class="container" style="margin-top:3%">    
     <a href="#" class="btn btn-info" onclick="AddNewProduct(0)">Agregar Prod</a><br /><br />
     
+
     <table class="table table-striped" id="data-table-demo">
         <thead>
             
@@ -29,7 +35,9 @@
             </tr>
         </thead>
         <tbody id="setProductList">
-            <tr id="LoadingStatus" style="color:red"></tr>
+            <tr id="LoadingStatus" style="color:red"></tr>            
+            
+            
         </tbody>
     </table>
     
@@ -43,7 +51,8 @@
                 <div class="modal-body">
                     <form id="form">
                         <fieldset id="submitForm">
-                            @Html.HiddenFor(m => m.ProductID, new { @id = "ProdId"})
+                            @Html.HiddenFor(m => m.ProductID, new { @id = "ProdId" })
+                                                        
                             <div class="form-group">
                                 @Html.TextBoxFor(m => m.ProductName, new { @id = "ProdName", @class = "form-control", @placeholder = "Descripcion" })
                             </div>
@@ -51,7 +60,7 @@
                                 @Html.TextBoxFor(m => m.QuantityPerUnit, new { @id = "QtyPU", @class = "form-control", @placeholder = "Cantidad" })
                             </div>
                             <div class="form-group">
-                                @Html.DropDownListFor(m => m.CategoryID, ViewBag.ListOfCategoria as SelectList, "---Select Categoria---", new { @id = "DropDwn", @class = "form-control" })                                 
+                                @Html.DropDownListFor(m => m.CategoryID, ViewBag.ListOfCategoria as SelectList, "---Select Categoria---", new { @id = "DropDwn", @class = "form-control" })
                             
                             </div>
                             <div class="form-group">
@@ -94,11 +103,11 @@
 
 
         $("#LoadingStatus").html("Cargando datos...");
-        $.get("/Home/GetStatusList",null,DataBind);
-        function DataBind(ProductList) {
-            //console.log(ProductList);
+        $.get("/Home/GetStatusList", null, DataBind);
         
+        function DataBind(ProductList) {           
             var setData = $("#setProductList");
+            
             for (var i = 0; i < ProductList.length; i++) {
                 var Data =
                 "<tr class='row_'" + ProductList[i].ProductID + "'>" +
@@ -108,10 +117,16 @@
                     "<td>" + ProductList[i].CategoryName + "</td>" +
                     "<td>" + "<a href='#' class='btn btn-warning' onclick='EditProduct("+ProductList[i].ProductID+")'><span class='glyphicon glyphicon-edit'></span></a>" + "</td>" +
                     "<td>" + "<a href='#' class='btn btn-danger' onclick='DeleteProduct("+ProductList[i].ProductID+")'><span class='glyphicon glyphicon-trash'></span></a>" + "</td>" +
+                    
                 "</tr>";
                 setData.append(Data);
                 $("#LoadingStatus").html(" ");
             }
+            console.log(ProductList[0].param);
+            $("#parametro").val(ProductList[0].param);
+            $("#parametro1").val(ProductList[0].param1);
+            $("#parametro2").val(ProductList[0].param2);
+            $("#parametro3").val(ProductList[0].param3);
             paginar();
         }
 
@@ -123,15 +138,18 @@
             });
         }
     
-        //show tha popup modal for add new product
+    //show tha popup modal for add new product    
+
         function AddNewProduct(ProductID)
-        {            
+        {
+
             $("form")[0].reset();
             $("#ProdId").val(0);
             $('#ProdName').val(''); //$("#ProdName").attr("placeholder", "Ingrese Producto").blur();
             $('#QtyPU').val(''); //$("#QtyPU").attr("placeholder", "Ingrese Cantidad").blur();
 
             $("#DropDwn option:selected").text("--Select Dept--");
+
             $("#modaltitle").html("Agregar Prod");
             $("#mymodal").modal();        
         }
@@ -160,10 +178,17 @@
                 }
             })
         }
+        
+        //guardar producto        
+        $("#saveProd").click(function () {           
+            var data = $("#submitForm").serialize();            
+            var par = $("#parametro").val();
+            var par1 = $("#parametro1").val();
+            var par2 = $("#parametro2").val();
+            var par3 = $("#parametro3").val();
 
-        //guardar producto
-        $("#saveProd").click(function () {
-            var data = $("#submitForm").serialize();
+            data = data + "&param=" + par + "&param1=" + par1 + "&param2=" + par2 + "&param3=" + par3;
+
             $.ajax({
                 type: "Post",
                 url: "/Home/SaveDataInDatabase",
